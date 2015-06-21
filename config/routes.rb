@@ -55,6 +55,11 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   resources :groups do
+    member do
+      post :join
+      post :quit
+    end
+
     resources :posts
   end
   
